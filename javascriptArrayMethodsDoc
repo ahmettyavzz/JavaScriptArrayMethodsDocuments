@@ -1,0 +1,187 @@
+#   	forEach
+Runs the entire array.  
+
+•	var array = ['a', 'b', 'c'];									Console: "a"
+array.forEach(function(element) {										 "b"
+•	    console.log(element);											 "c"
+  });
+  
+  
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+#   	includes
+It returns boolean whether the searched value exists in the array.
+
+var pets = ['cat', 'dog', 'bat'];
+console.log(pets.includes('cat'));									Console: True
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+#   	filter
+Creates a new array according to the desired filter in the array.
+
+const array = [1, 2, 3, 4, 5, 6];
+const filtered = array.filter(num => num > 3);							Console: [4,5,6]
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#   	map
+It is used to create a new array by modifying the array.
+
+const numbers = [1, 2, 3, 4, 5, 6];
+•	const oneAdded = numbers.map(num => num + 1); 							Console: [2, 3, 4, 5, 6, 7]
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#   	sort
+It is used to sort the elements of the array in ascending or descending order.
+
+
+var months = ['March', 'Jan', 'Feb', 'Dec'];						        Console:["Dec","Feb","Jan","March"]
+months.sort();
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#   	Array.from()
+It helps us to create array.
+
+let text = "java"
+console.log(Array.from(text));                                                                         Console: ["j", "a", "v", "a"]
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#    	Array.of()
+This method is used to create a new array.
+
+console.log(Array.of(1, 2, 3));                                                                        Console: [1,2,3]
+console.log(Array.of(5));                                                                              Console: [5]
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+var liste = ["Java", "JavaScript", "C#"];                                                             
+
+#   	toString()
+The function converts array elements to a comma-separated text data type.
+
+console.log(liste.toString());                                                                         Console:”Java”,”JavaScript”,”C#”
+
+
+#   	join()
+The JavaScript join function can add strings in addition to the toString function.
+
+console.log(liste.join("#"));                                                                          Console:"Java#JavaScript#C#"
+
+
+#    	pop()
+The pop() function is used to remove the last element of the array.
+
+•	liste.pop();   console.log(liste)                                                                      Console:["Java", "JavaScript"]
+
+
+#   	push()
+The push() function is used to add a new element to the end of the array.  
+Console:               
+liste.push("SpringBoot");   console.log(liste)                                                        ["Java", "JavaScript", "C#", "SpringBoot"]
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+var liste = ["Java", "JavaScript", "C#"];                                                             
+
+#    	shift
+The shift function is used to remove the first element of the array.
+
+liste.shift();   console.log(liste)                                                                    Console: ["JavaScript", "C#"]
+       
+       
+#   	Unshift                                                          
+The unshift function is used to add a new element to the front of the array.
+                                                                                                        Console:
+liste.unshift(“SpringBoot”);   console.log(liste)                                                     ["SpringBoot","Java”,”JavaScript", "C#"]
+
+
+#   	splice
+The splice() function can be used to add a new element to the array. 
+The first parameter (1) is which of the elements
+It declares that the element will be added from the row. 
+The second parameter (0) tells how many elements will be deleted.                                                 Console:
+
+liste.splice(1, 0, "C", "C++");								                                                                   ["Java", "C", "C++","JavaScript", "C#"]
+
+                                                                                                 
+liste.splice(1, 3);									                                                                        	  ["Java", "C#"]
+ 
+ 
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#    	concat
+The concat function is used to create a new array by concatenating the arrays.
+
+var liste = ["C", "C#"];										
+var liste1 = ["Java", "JS"];
+console.log( liste.concat(liste1))									["C", "C#", "Java", "JS"]
+               
+               
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#      	slice
+The slice function is used to get certain elements from the array.
+When two parameters are written, it takes the elements from the first parameter to the second parameter.
+
+
+var liste = ["C", "C#", "Java", "JS"]										
+var yeniListe = liste.slice(1,3);
+console.log(yeniListe)			                						["C#",”Java”]
+                                                              
+                                                   
+
+If the second parameter is not written, it takes the remaining elements of the array.
+
+var yeniListe = liste.slice(2);                                                                               
+console.log(yeniListe)                                                                                        [”Java”,”JS”]
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#       find-findIndex
+Returns the first value that meets the specified criteria. FindIndex returns the index of the value.
+
+products = [ { id: 1, name: "Computer"}, { id: 2, name: "Phone"}, { id: 3, name: "Tablet"}]
+product= products.find((p) => {
+    if(p.name==="Phone"){return p }});     console.log(product)                                                  Console:{id: 2,name: "Phone"}
+
+
+#     	indexOf
+
+Enter the index value to start searching for the difference from the findIndex method
+makes it easy for us to search.
+
+products=["Computer","Phone","Tablet"]
+
+let result= products.indexOf( "Tablet") ;   console.log(result)                                                  Console:2
+
+1.indexten sonra “Computer” olmadığı için -1 değeri döner.
+let result= products.indexOf( "Computer",1) ;   console.log(result)                                              Console: -1
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
